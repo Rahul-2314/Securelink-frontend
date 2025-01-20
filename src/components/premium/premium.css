@@ -1,0 +1,97 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.pricing-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.free-card .title {
+  color: #6a6a6a;
+}
+
+.premium-card .title {
+  color: #6f42c1;
+}
+
+.price-section {
+  margin: 20px 0;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6f42c1;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.experience-btn {
+  background-color: #6f42c1;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.purchase-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.features {
+  list-style-type: none;
+  padding: 0;
+}
+
+.included {
+  color: #000;
+}
+
+.excluded {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.subscription-options {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.subscription-options .option {
+  margin: 10px 0;
+}
+
+.redeem-code {
+  background-color: #6f42c1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
