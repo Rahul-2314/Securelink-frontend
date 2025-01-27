@@ -145,10 +145,10 @@ function Homepage({ isUser , setShowLogin}) {
 										className="link"
 										id="link"
 										onClick={() =>
-											window.open(`http://localhost:5000/${shortUrl}`, "_blank")
+											window.open(`${API_BASE_URL}/${shortUrl}`, "_blank")
 										}
 									>
-										http://localhost:5000/{shortUrl}
+										{API_BASE_URL}/{shortUrl}
 									</p>
 									<i
 										className="fas fa-copy"
