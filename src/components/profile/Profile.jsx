@@ -26,11 +26,13 @@ function Profile({ onClose , fullname , username }) {
 					<div className="profile-details">
 						<div className="fullname">
 							<h2 className="header">Fullname : </h2>
-							<h4 className="response_data">{fullname}</h4>
+							{fullname? (<h4 className="response_data">{fullname}</h4>)
+							:(<i className="fa-solid fa-spinner fa-spin"></i>)}
 						</div>
 						<div className="username">
 							<h2 className="header">Username : </h2>
-							<h4 className="response_data">{username}</h4>
+							{username? (<h4 className="response_data">{username}</h4>)
+							:(<i className="fa-solid fa-spinner fa-spin"></i>)}
 						</div>
 					</div>
 				</div>
