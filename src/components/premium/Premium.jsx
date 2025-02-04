@@ -1,48 +1,52 @@
 import React from "react";
-import PremiumCard from "./PremiumCard";
+import "./premium.css";
 
-const Premium = () => {
-	const freeFeatures = [
-		{ text: "1024 GB of cloud storage", included: true },
-		{ text: "Original quality video playback", included: false },
-		{ text: "Cloud decompression", included: false },
-		{ text: "Free of advertising", included: false },
-	];
-
-	const premiumFeatures = [
-		{ text: "2048 GB of cloud storage", included: true },
-		{ text: "Original quality video playback", included: true },
-		{ text: "Cloud decompression", included: true },
-		{ text: "Uploading of large files up to 20 GB", included: true },
-		{ text: "Encrypted space", included: true },
-	];
-
+export default function Premium() {
 	return (
-		<div className="pricing-container">
-			<PremiumCard
-				title="Free"
-				price={0}
-				oldPrice={null}
-				features={freeFeatures}
-				isFree={true}
-			/>
-			<PremiumCard
-				title="Premium"
-				price={349.0}
-				oldPrice={580.0}
-				features={premiumFeatures}
-				isFree={false}
-			/>
-
-			<div className="subscription-options">
-				<div className="option">Monthly ₹349.00 (40% off)</div>
-				<div className="option">Yearly ₹3499.00</div>
-				<div className="option">1 Month ₹449.00/month</div>
-				<div className="option">1 Year ₹358.25/month</div>
-				<button className="redeem-code">Redeem Code</button>
+		<section id="premium">
+			<div className="premium-header">
+				<h1>-- SecureLink Premium --</h1>
+				<p className="subtitle">Elevate Your Link Management Experience</p>
 			</div>
-		</div>
-	);
-};
+			<div className="plans">
+				<div className="free">
+					<div className="plan-header">
+						<h2>Free Plan</h2>
+						<p className="price">
+							&#8377;0<span>/forever</span>
+						</p>
+					</div>
+					<ul>
+						<li>Limit: 50 URL per Month</li>
+						<li>Basic Analytics</li>
+						<li>Standard QR Code</li>
+						<li>Extension Support</li>
+						<li>Community Support</li>
+					</ul>
+				</div>
 
-export default Premium;
+				<div className="premium">
+					<div className="plan-header">
+						<h2>Premium Plan</h2>
+						<p className="price">
+							&#8377;499<span>/month</span>
+						</p>
+					</div>
+					<ul>
+						<li>Unlimited URL Shortening</li>
+						<li>Advanced Analytics</li>
+						<li>Premium QR Codes</li>
+						<li>Priority API Access</li>
+						<li>24/7 Premium Support</li>
+						<li>Team Management</li>
+					</ul>
+					<button className="subscribe">
+						Get Premium
+						<span className="arrow">→</span>
+					</button>
+					<div className="badge">Most Popular</div>
+				</div>
+			</div>
+		</section>
+	);
+}
