@@ -81,7 +81,7 @@ function Navbar({isUser , setIsUser , showLogin , setShowLogin}) {
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link to="" className="nav-link" id="premium">
+							<Link to="/premium" className="nav-link" id="nav-premium">
 								<i className="fas fa-chess-queen" aria-hidden="true"></i>
 								&#32;Premium
 							</Link>
