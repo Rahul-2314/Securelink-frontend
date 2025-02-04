@@ -34,7 +34,7 @@ function App() {
 					/>
 					<Route path="/about" element={<About />} />
 					<Route path="/mylinks" element={<Mylinks />} />
-					{/* <Route path="/premium" element={<Premium />} /> */}
+					<Route path="/premium" element={<Premium />} />
 					{/* <Route
 						path="/signup"
 						element={
