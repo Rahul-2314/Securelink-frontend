@@ -5,7 +5,7 @@ import Footer from './components/footer/Footer'
 import './App.css'
 import Mylinks from './components/mylinks/Mylinks'
 import About from './components/about/About'
-// import Premium from './components/premium/Premium'
+import Premium from './components/premium/Premium'
 import Signup from './components/signup/Signup'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
