@@ -235,7 +235,9 @@ function Signup({ onClose , setShowLogin , setIsUser }) {
 						Already an user? <span onClick={switchLogin}>Login</span>
 					</span>
 				</form>
-				<ToastContainer position="bottom-right" transition={Zoom} />
+				<strong>
+					<ToastContainer position="bottom-right" transition={Zoom} />
+				</strong>
 			</div>
 		</>
 	);
