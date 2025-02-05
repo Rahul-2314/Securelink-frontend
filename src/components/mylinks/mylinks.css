@@ -52,6 +52,11 @@
     color: #97b4a5;
     cursor: pointer;
     transition: color 0.3s ease;
+    max-width: 30rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
 }
 
 .content .link a:hover {
@@ -62,6 +67,7 @@
     cursor: pointer;
     font-size: 20px;
     transition: transform 0.3s ease; 
+    flex-shrink: 0;
 }
 
 .scrollable-container::-webkit-scrollbar {
@@ -69,11 +75,10 @@
 }
 
 .scrollable-container::-webkit-scrollbar-thumb {
-    background-color: #e0e0e0;
+    background-color: #1D6468;
     border-radius: 10px;
 }
 
 .scrollable-container::-webkit-scrollbar-track {
-/*     background-color: #e0e0e0; */
-    background-color: #1D6468;
+    background-color: #e0e0e0;
 }
