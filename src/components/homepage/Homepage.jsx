@@ -189,11 +189,13 @@ function Homepage({ isUser , setShowLogin}) {
 					<img loading="lazy" src={linkanime} alt="illustration" />
 				</div>
 			</div>
-			<ToastContainer
-				position="bottom-right"
-				transition={Zoom}
-				// autoClose={2000}
-			/>
+			<strong>
+				<ToastContainer
+					position="bottom-right"
+					transition={Zoom}
+					// autoClose={2000}
+				/>
+			</strong>
 		</section>
 	);
 }
