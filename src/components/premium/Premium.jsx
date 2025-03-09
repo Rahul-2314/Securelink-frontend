@@ -44,7 +44,7 @@ export default function Premium() {
 						Get Premium
 						<span className="arrow">→</span>
 					</button>
-					<div className="badge">Most Popular</div>
+					<div className="badge">Limited Offer &#127991;&#65039;</div>
 				</div>
 			</div>
 		</section>
