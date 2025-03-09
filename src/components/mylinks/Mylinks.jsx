@@ -25,15 +25,19 @@ function Mylinks() {
 		}
 	};
 
+	// useEffect(() => {
+	// 	if (mylinks.length > 0) {
+	// 		mylinks.forEach((linkId) => {
+	// 			if (!analytics[linkId]) {
+	// 				handleGetAnalytics(linkId);
+	// 			}
+	// 		});
+	// 	}
+	// }, [mylinks, analytics]);
 	useEffect(() => {
-		if (mylinks.length > 0) {
-			mylinks.forEach((linkId) => {
-				if (!analytics[linkId]) {
-					handleGetAnalytics(linkId);
-				}
-			});
-		}
-	}, [mylinks, analytics]);
+		const linksToFetch = mylinks.filter((linkId) => !analytics[linkId]);
+		linksToFetch.forEach(handleGetAnalytics);
+	}, [mylinks]);
 
 	const copyURL = async (shortUrl) => {
 		try {
@@ -55,7 +59,8 @@ function Mylinks() {
 	// }
 
 	if (error) {
-		return <div className="mylinks" style="text-align: center">Error: {error}</div>;
+		// return <div className="mylinks" style="text-align: center">Error: {error}</div>;
+		return <div className="mylinks" style={{ textAlign: "center" }}>Error: {error}</div>;
 	}
 
 	return (
