@@ -7,11 +7,14 @@ import Mylinks from './components/mylinks/Mylinks'
 import About from './components/about/About'
 import Premium from './components/premium/Premium'
 import Signup from './components/signup/Signup'
+import userProfile from './hooks/userProfile'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [isUser, setIsUser] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+
+  const { profile, loading, error } = userProfile();
 
   return (
 		<Router>
@@ -21,6 +24,7 @@ function App() {
 					setIsUser={setIsUser}
 					showLogin={showLogin}
 					setShowLogin={setShowLogin}
+					profile={profile}
 				/>
 				<Routes>
 					<Route
