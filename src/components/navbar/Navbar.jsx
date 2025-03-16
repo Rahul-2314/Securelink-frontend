@@ -6,15 +6,15 @@ import './navbar.css'
 import Login from '../login/Login'
 import Signup from '../signup/Signup';
 import Profile from '../profile/Profile';
-import userProfile from "../../hooks/userProfile";
+// import userProfile from "../../hooks/userProfile";
 import { useNavigate } from 'react-router-dom';
 
-function Navbar({isUser , setIsUser , showLogin , setShowLogin}) {
+function Navbar({isUser , setIsUser , showLogin , setShowLogin, profile}) {
 	// const [showLogin, setShowLogin] = useState(showLogin);
 	const [showSignup, setShowSignup] = useState(false);
 	const [showProfile, setShowProfile] = useState(false);
 	// const [isUser, setIsUser] = useState(isUser);
-	const { profile, loading, error } = userProfile();
+	// const { profile, loading, error } = userProfile();
 
 	const handleLoginClick = () => {
 		setShowLogin(true);
