@@ -16,6 +16,20 @@ function App() {
 
   const { profile, loading, error } = userProfile();
 
+	const checkTokenExpiration = () => {
+		const token = localStorage.getItem("token");
+		if (token) {
+			const decoded = JSON.parse(atob(token.split(".")[1]));
+			if (decoded.exp * 1000 < Date.now()) {
+				localStorage.removeItem("token");
+				window.location.href = "/";
+			}
+		}
+	};
+	useEffect(() => {
+		checkTokenExpiration();
+	}, []);
+
   return (
 		<Router>
 			<>
